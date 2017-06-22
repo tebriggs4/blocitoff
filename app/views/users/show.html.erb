@@ -1,1 +1,9 @@
-
+<div id = "todo-list">
+    <% if user_signed_in? %>
+        <h1 id = "my-todo-list">My Todo List</h1>
+        </br>
+        <%= render @user.items %>
+        </br>
+        <%= render partial: "items/form", locals: {user: @user} %>
+    <% end %>
+</div>
